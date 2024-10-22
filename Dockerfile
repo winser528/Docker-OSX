@@ -397,7 +397,7 @@ CMD ! [[ -e "${BASESYSTEM_IMAGE:-BaseSystem.img}" ]] \
             --height "${HEIGHT:-1080}" \
             --output-bootdisk "${BOOTDISK:=/home/arch/OSX-KVM/OpenCore/OpenCore.qcow2}" \
     || exit 1 ; } \
-    ; ./enable-ssh.sh && /bin/bash -c ./Launch.sh
+    ; /home/arch/OSX-KVM/enable-ssh.sh && /bin/bash -c ./Launch.sh
 
 # virt-manager mode: eta son
 # CMD virsh define <(envsubst < Docker-OSX.xml) && virt-manager || virt-manager
